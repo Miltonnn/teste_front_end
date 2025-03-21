@@ -1,20 +1,15 @@
-<template>
-    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
-        <div class="row w-100">
-            <h1 class="text-center">Bem-vindo à Página Inicial!</h1>
-        </div>
-    </div>
-</template>
-
 <script>
+import AdminLayout from "@/layouts/AdminLayout.vue";
+
 export default {
-    name: 'Dashboard'
-}
+    components: {
+        AdminLayout,
+    },
+};
 </script>
 
-<style scoped>
-/* Estilos da página Home */
-h1 {
-    color: #4CAF50;
-}
-</style>
+<template>
+    <AdminLayout>
+        <h1>Dashboard</h1>
+    </AdminLayout>
+</template>

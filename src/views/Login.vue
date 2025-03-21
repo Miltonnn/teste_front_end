@@ -38,9 +38,9 @@ export default {
     },
     methods: {
         login() {
-            
+
             if (this.email && this.password) {
-                
+
                 this.$router.push('/home');
             } else {
                 alert('Por favor, preencha o email e a senha');
