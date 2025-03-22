@@ -1,11 +1,7 @@
 <template>
   <div class="d-flex min-vh-100">
-    <aside
-      v-if="showSidebar"
-      :class="{ 'sidebar-toggle': true, 'collapsed': isSidebarCollapsed }"
-      id="sidebar"
-      class="bg-white"
-    >
+    <aside v-if="showSidebar" :class="{ 'sidebar-toggle': true, 'collapsed': isSidebarCollapsed }" id="sidebar"
+      class="bg-white">
       <div class="sidebar-logo">
         <router-link to="/dashboard">
           <img class="m-2" src="/src/assets/images/logo.png" alt="Logo" />
@@ -17,18 +13,17 @@
         </h2>
         <li class="sidebar-item">
           <router-link to="/dashboard" class="sidebar-link text-dark">
-            Dashboard
+            <i class="fa-solid fa-ethernet"></i> Dashboard
           </router-link>
         </li>
-        <li class="sidebar-item">
-          <router-link to="/configuracoes" class="sidebar-link text-dark">
-            Configurações
-          </router-link>
-        </li>
+
       </ul>
       <div class="sidebar-footer">
+        <router-link to="/configuracoes" class="sidebar-link text-dark">
+          <i class="fa-solid fa-gear"></i> Configurações
+        </router-link>
         <router-link to="/" class="sidebar-link text-dark">
-          Sair
+          <i class="fa-solid fa-share-from-square"></i> Sair
         </router-link>
       </div>
     </aside>
