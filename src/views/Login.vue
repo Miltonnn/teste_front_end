@@ -3,8 +3,8 @@
         <img class="m-4" src="/src/assets/images/logo.png" alt="Logo" />
     </div>
     <div class="container min-vh-100 d-flex align-items-center">
-        <div class="row w-100 justify-content-between align-items-center">
-            <div class="col-3">
+        <div class="row w-100 justify-content-between align-items-center g-2">
+            <div class="col-sm-12 col-lg-3">
                 <div class="login">
                     <h2>Bem-vindo de Volta</h2>
                     <p>Insira sua credenciais para acessar a plataforma</p>
@@ -21,7 +21,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-8 d-flex justify-content-end">
+            <div class="col-sm-12 col-lg-9 d-flex justify-content-end">
                 <img src="/src/assets/images/img-dash.png" alt="Imagem ilustrativa" />
             </div>
         </div>
@@ -38,10 +38,9 @@ export default {
     },
     methods: {
         login() {
-
             if (this.email && this.password) {
 
-                this.$router.push('/home');
+                this.$router.push('/dashboard');
             } else {
                 alert('Por favor, preencha o email e a senha');
             }
