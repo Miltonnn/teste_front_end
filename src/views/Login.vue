@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <img class="m-4" src="/src/assets/images/logo.png" alt="Logo" />
     </div>
-    <div class="container min-vh-100 d-flex align-items-center">
-        <div class="row w-100 justify-content-between align-items-center g-2">
+    <div class="container d-flex align-items-center">
+        <div class="row w-100 justify-content-between align-items-center g-4">
             <div class="col-sm-12 col-lg-3">
                 <div class="login">
                     <h2>Bem-vindo de Volta</h2>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-lg-9 d-flex justify-content-end">
-                <img src="/src/assets/images/img-dash.png" alt="Imagem ilustrativa" />
+                <img class="img-login"  src="/src/assets/images/img-dash.png" alt="Imagem ilustrativa" />
             </div>
         </div>
     </div>
@@ -48,3 +48,11 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+@media screen and (max-width: 576px) {
+    .img-login {
+        display: none;
+    }
+}
+</style>

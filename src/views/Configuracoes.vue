@@ -4,8 +4,8 @@ import AdminLayout from "@/layouts/AdminLayout.vue";
 
 // Estado do modal
 const showModal = ref(false);
-const isEditing = ref(false); 
-const editIndex = ref(null);  
+const isEditing = ref(false);
+const editIndex = ref(null);
 const profiles = ref([]);
 
 // Novo perfil temporário
@@ -24,8 +24,8 @@ onMounted(() => {
 
 const openModal = () => {
     showModal.value = true;
-    isEditing.value = false; 
-    newProfile.value = { name: "", email: "", role: "" }; 
+    isEditing.value = false;
+    newProfile.value = { name: "", email: "", role: "" };
 };
 
 const closeModal = () => {
@@ -64,7 +64,7 @@ const saveProfile = () => {
 const editProfile = (index) => {
     isEditing.value = true;
     editIndex.value = index;
-    newProfile.value = { ...profiles.value[index] };  
+    newProfile.value = { ...profiles.value[index] };
     showModal.value = true;
 };
 
@@ -90,27 +90,29 @@ const deleteProfile = (index) => {
             <div class="row mt-3">
                 <div v-if="profiles.length === 0" class="text-muted">Nenhum perfil cadastrado.</div>
                 <div v-else class="col-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Email</th>
-                                <th>Perfil</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="(profile, index) in profiles" :key="index">
-                                <td>{{ profile.name }}</td>
-                                <td>{{ profile.email }}</td>
-                                <td>{{ profile.role }}</td>
-                                <td>
-                                    <button class="btn btn-success" @click="editProfile(index)">Editar</button>
-                                    <button class="btn btn-danger" @click="deleteProfile(index)">Deletar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Perfil</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(profile, index) in profiles" :key="index">
+                                    <td>{{ profile.name }}</td>
+                                    <td>{{ profile.email }}</td>
+                                    <td>{{ profile.role }}</td>
+                                    <td>
+                                        <button class="btn btn-success" @click="editProfile(index)">Editar</button>
+                                        <button class="btn btn-danger" @click="deleteProfile(index)">Deletar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,7 +142,8 @@ const deleteProfile = (index) => {
 
                 <div class="d-flex justify-content-between mt-3 gap-2">
                     <button class="btn btn-secondary w-100" @click="closeModal">Voltar</button>
-                    <button class="btn btn-success w-100" @click="saveProfile">{{ isEditing.value ? "Salvar Alterações" : "Adicionar" }}</button>
+                    <button class="btn btn-success w-100" @click="saveProfile">{{ isEditing.value ? "Salvar Alterações"
+                        : "Adicionar" }}</button>
                 </div>
             </div>
         </div>
@@ -148,7 +151,6 @@ const deleteProfile = (index) => {
 </template>
 
 <style scoped>
-
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -199,7 +201,7 @@ const deleteProfile = (index) => {
     position: relative;
 }
 
-.radio-label input:checked + .custom-radio::after {
+.radio-label input:checked+.custom-radio::after {
     content: "";
     width: 12px;
     height: 12px;
@@ -227,7 +229,7 @@ const deleteProfile = (index) => {
     margin-right: 5px;
 }
 
-.btn-envia{
+.btn-envia {
     width: 2rem;
     height: 2rem;
     background-color: #3e3bfd;
@@ -238,7 +240,8 @@ const deleteProfile = (index) => {
     font-size: 1.5rem;
     transition: .3s;
 }
-.btn-envia:hover{
+
+.btn-envia:hover {
     background-color: #3e3bfd;
     color: #fff;
 }
