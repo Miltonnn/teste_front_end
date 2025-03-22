@@ -1,22 +1,17 @@
 <script setup>
 import { ref } from 'vue';
-
-// Props
 const props = defineProps({
     showModal: Boolean,
     isEditing: Boolean,
     newProfile: Object,
 });
 
-// Emite eventos para o componente pai
 const emit = defineEmits(['close', 'save']);
 
-// Função para fechar o modal
 const closeModal = () => {
     emit('close');
 };
 
-// Função para salvar o perfil
 const saveProfile = () => {
     emit('save');
 };
@@ -57,7 +52,6 @@ const saveProfile = () => {
 </template>
 
 <style scoped>
-/* Estilização do Modal */
 .modal-overlay {
     position: fixed;
     top: 0;

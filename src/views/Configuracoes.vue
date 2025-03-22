@@ -71,7 +71,6 @@ const editProfile = (index) => {
 // Função para deletar um perfil
 const deleteProfile = (index) => {
     profiles.value.splice(index, 1);
-    // Atualiza o localStorage após deletar
     localStorage.setItem("profiles", JSON.stringify(profiles.value));
 };
 </script>
@@ -116,7 +115,6 @@ const deleteProfile = (index) => {
             </div>
         </div>
 
-        <!-- Modal -->
         <div v-if="showModal" class="modal-overlay">
             <div class="modal-content">
                 <h3>{{ isEditing.value ? "Editar Usuário" : "Novo Usuário" }}</h3>
