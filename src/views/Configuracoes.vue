@@ -106,8 +106,10 @@ const deleteProfile = (index) => {
                                     <td>{{ profile.email }}</td>
                                     <td>{{ profile.role }}</td>
                                     <td>
-                                        <button class="btn btn-success" @click="editProfile(index)">Editar</button>
-                                        <button class="btn btn-danger" @click="deleteProfile(index)">Deletar</button>
+                                        <button class="btn btn-success btn-sm"
+                                            @click="editProfile(index)">Editar</button>
+                                        <button class="btn btn-danger btn-sm"
+                                            @click="deleteProfile(index)">Deletar</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -245,4 +247,7 @@ const deleteProfile = (index) => {
     background-color: #3e3bfd;
     color: #fff;
 }
+
+
 </style>
+
