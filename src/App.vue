@@ -77,7 +77,7 @@ a {
   transition: all 0.35s ease-in-out;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #000;
+  border-right: 1px solid #eee;
 }
 
 #sidebar.collapsed {
